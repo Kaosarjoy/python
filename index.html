@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Python Programming — Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --accent: linear-gradient(135deg,#7c3aed,#06b6d4);
+      --glass: rgba(255,255,255,0.04);
+      --muted: #9aa4b2;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:radial-gradient(1000px 600px at 10% 10%, rgba(12,34,63,0.6), transparent), var(--bg);}
+    .wrap{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+    .logo{width:64px;height:64px;border-radius:12px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 18px rgba(7,10,27,0.6)}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+    nav button{background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:var(--muted);padding:8px 12px;border-radius:10px;cursor:pointer}
+    nav button.active{background:linear-gradient(90deg,#1f2937, #0b1220);color:#fff;border:1px solid rgba(124,58,237,0.25)}
+
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    section.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    section.card h2{margin:0 0 8px}
+    pre{background:#071022;padding:12px;border-radius:10px;overflow:auto;color:#c9f1ff;margin:8px 0}
+    code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;font-size:0.95rem}
+    .muted{color:var(--muted)}
+
+    footer{margin-top:22px;padding:12px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media(min-width:780px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    /* small helpers */
+    .cta{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Py</div>
+      <div>
+        <h1>Python Programming — Basics</h1>
+        <p class="lead">A clean, single-page mini-site that explains core concepts with examples — made for beginners.</p>
+      </div>
+    </header>
+
+    <nav id="nav">
+      <button data-target="intro" class="active">Intro</button>
+      <button data-target="variables">Variables</button>
+      <button data-target="io">Input & Output</button>
+      <button data-target="condition">If / Else</button>
+      <button data-target="loops">Loops</button>
+      <button data-target="functions">Functions</button>
+      <button data-target="why">Why Learn</button>
+    </nav>
+
+    <main class="grid" id="main">
+      <section id="intro" class="card">
+        <h2>What is Python?</h2>
+        <p class="muted">Python is a high-level, interpreted programming language with readable syntax. It's widely used for web development, data science, AI, scripting and automation.</p>
+      </section>
+
+      <section id="variables" class="card">
+        <h2>Variables & Data Types</h2>
+        <p class="muted">Store values in names. Common types: <strong>int</strong>, <strong>float</strong>, <strong>str</strong>, <strong>bool</strong>.</p>
+        <pre><code>name = "Joy"
+age = 20
+pi = 3.14159
+is_student = True
+</code></pre>
+      </section>
+
+      <section id="io" class="card">
+        <h2>Input & Output</h2>
+        <p class="muted">Print to screen and read user input.</p>
+        <pre><code>print("Hello, World!")
+name = input("Enter your name: ")
+print("Hi,", name)
+</code></pre>
+      </section>
+
+      <section id="condition" class="card">
+        <h2>Conditions (if / else)</h2>
+        <p class="muted">Branch logic using comparisons.</p>
+        <pre><code>age = 18
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+</code></pre>
+      </section>
+
+      <section id="loops" class="card">
+        <h2>Loops</h2>
+        <p class="muted">Repeat actions: for-loops and while-loops.</p>
+        <pre><code>for i in range(5):
+    print(i)
+
+count = 1
+while count <= 5:
+    print(count)
+    count += 1
+</code></pre>
+      </section>
+
+      <section id="functions" class="card">
+        <h2>Functions</h2>
+        <p class="muted">Reusable blocks of code.</p>
+        <pre><code>def greet(name):
+    return "Hello " + name
+
+print(greet("Joy"))
+</code></pre>
+      </section>
+
+      <section id="why" class="card">
+        <h2>Why learn Python?</h2>
+        <p class="muted">Easy to learn, huge community, and paths to AI, web, and data science. Great first language.</p>
+        <iframe 
+          src="https://skywork.ai/ppt/1971940008159518720?projectId=1971939561249542144"
+          width="100%" 
+          height="500" 
+          style="border:none; border-radius:12px; margin-top:12px;">
+        </iframe>
+      </section>
+    </main>
+
+    <footer>Made with ✨ by your friendly mentor — edit freely. Copy this file to <code>index.html</code> and open in your browser.</footer>
+  </div>
+
+  <script>
+    // simple nav -> show/hide cards
+    const nav = document.getElementById('nav');
+    const main = document.getElementById('main');
+    nav.addEventListener('click', e => {
+      if(e.target.tagName !== 'BUTTON') return;
+      [...nav.querySelectorAll('button')].forEach(b=>b.classList.remove('active'));
+      e.target.classList.add('active');
+      const target = e.target.dataset.target;
+      [...main.querySelectorAll('section')].forEach(sec=>{
+        sec.style.display = sec.id === target ? 'block' : 'none';
+      });
+    });
+    // default: show first column only
+    window.addEventListener('DOMContentLoaded', ()=>{
+      // show all on wide screens, else show intro only
+      if(window.innerWidth < 780){
+        [...main.querySelectorAll('section')].forEach((s,i)=> s.style.display = i===0 ? 'block' : 'none');
+      }
+    });
+  </script>
+</body>
+</html>
