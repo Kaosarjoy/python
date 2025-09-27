@@ -15,3 +15,9 @@ elif (b > a) and (b > c):
 else:
     print("The biggest number is", c)
 
+# for loop 
+for i in range(10, 0, -1):  
+    print(i)
+
+for i in range(1, 11):  
+    print(i)
